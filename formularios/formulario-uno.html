@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 1</title>
+</head>
+<body>
+    <h1>Formulario básico:</h1>
+
+    <form>
+        <label for="nombre">Nombre:</label> <!--'for' permite crear un atributo de etiqueta, un nombre en el cual voy a poder identificar un determinado valor-->
+        <input type="text" id="nombre" name="name"> <!--Es el campo en donde el usuario coloca el dato que se le solicita.
+        El 'id' debe llevar el mismo nombre que coloqué en el 'for', para que pueda relacionar el nombre con el campo
+    'name' agrupa o selecciona los elementos que tengan el mismo nombre, y mediante ese código, poder relacionarlos-->
+    <br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="name"> <!--en 'name' vuelvo a completar con name, para que esta línea de código se relaciones con la de arriba-->
+        
+    </form>
+
+    <h2>Formulario con opción múltiple:</h2>
+
+    <form action="" target="_blank" method="POST"> <!--Para enviar lo datos. Se especifica con qué tipo de servidor quiero interactuar para enviar un dato, guardar un valor o devolver info. Por ejemplo: quiero guardar/enviar/recoger esa info en el archivo action_page.php
+    El action define cómo vas a eviar el formulario
+El 'target' especifica el resultado enviado. Tiene varias opciones, por ejemplo el _self indica que el formulario se enviará en una ventana actual; el _blanck para que lo haga en una pestaña diferente
+'method', se especifica con qué tipo de método vas a trabajar. El tipo de información que estamos enviando: GET significa que los datos del formulario serán visibles en el campo de dirección de la página. Que me entre lo que realmente estoy enviando.
+POST es para hacerlo de manera oculta. Quiere decir que los datos de mi formulario contienen información conficencial, que no deben ser visibles, para evitar así el robo de información o recolección de datos-->
+        <input type="radio" id="femenino" name="sexo" value="femenino"> <!--'radio' es para poder seleccionar elementos.
+        'value' especifica el valor del elemento que vamos a introducir, que en este caso es femenino-->
+        <label for="femenino">femenino</label>
+            <br>  
+    
+    <input type="radio" id="masculino" name="sexo" value="masculino">
+    <label for="masculino">masculino</label>
+    <br>  
+    
+    <input type="radio" id="otro" name="sexo" value="otro">
+    <label for="otro">otro</label>
+            <br>
+<input type="submit" value="Enviar ya"> <!--permite enviar los datos.
+Por defecto el 'submit' viene con el texto de 'enviar', perolo puedo caaambiar en 'value'-->
+
+</form>
+<!--Nota: si hago algún ambio en 'name', ed decir, a alguno de ellos les coloco otro nombre, voy a poder elegir varios a la vez y no un sólo sexo-->
+</body>
+</html>
